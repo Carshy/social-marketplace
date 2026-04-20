@@ -1,6 +1,6 @@
-import { showToast } from '/js/ui-events.js';
 import { LitElement, html, css } from 'lit';
 import { apiGet, apiPost } from '/js/api-client.js';
+import { showToast } from '/js/ui-events.js';
 
 class MarketplaceChatThread extends LitElement {
   static properties = {
@@ -201,7 +201,7 @@ class MarketplaceChatThread extends LitElement {
     this.viewerName = '';
     this.item = null;
     this.messages = [];
-    this.loading = true;
+    this.loading = false;
     this.error = '';
     this.lastTimestamp = '';
     this.actionBusyId = '';
@@ -212,7 +212,6 @@ class MarketplaceChatThread extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     window.addEventListener('marketplace-thread-refresh', this._refreshHandler);
-    this.loadContext();
   }
 
   disconnectedCallback() {
@@ -221,16 +220,25 @@ class MarketplaceChatThread extends LitElement {
     super.disconnectedCallback();
   }
 
+  updated(changedProps) {
+    if (changedProps.has('itemId') && this.itemId) {
+      this.loadContext();
+    }
+  }
+
   handleRefresh(event) {
     if (!event.detail || event.detail.itemId !== this.itemId) return;
     this.loadContext();
   }
 
   async loadItem() {
+    if (!this.itemId) return;
     this.item = await apiGet(`/api/items/${this.itemId}`);
   }
 
   async loadThreadOnly() {
+    if (!this.itemId) return;
+
     const data = await apiGet(`/api/messages/item/${this.itemId}`);
     this.messages = Array.isArray(data.messages) ? data.messages : [];
     this.lastTimestamp =
@@ -249,6 +257,8 @@ class MarketplaceChatThread extends LitElement {
   }
 
   async loadContext() {
+    if (!this.itemId) return;
+
     this.loading = true;
     this.error = '';
 
@@ -265,6 +275,7 @@ class MarketplaceChatThread extends LitElement {
   }
 
   startPolling() {
+    if (!this.itemId) return;
     if (this._pollTimer) clearTimeout(this._pollTimer);
 
     const poll = async () => {
@@ -347,7 +358,7 @@ class MarketplaceChatThread extends LitElement {
     const rawPrice = window.prompt('Enter counter offer amount');
     if (!rawPrice) return;
 
-    const counterPrice = Number(rawPrice); 
+    const counterPrice = Number(rawPrice);
 
     if (!Number.isFinite(counterPrice) || counterPrice <= 0) {
       showToast({
@@ -459,6 +470,10 @@ class MarketplaceChatThread extends LitElement {
   }
 
   render() {
+    if (!this.itemId) {
+      return html`<div class="state-box">Waiting for item conversation…</div>`;
+    }
+
     if (this.loading) {
       return html`<div class="state-box">Loading conversation…</div>`;
     }

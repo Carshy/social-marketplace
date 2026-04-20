@@ -435,7 +435,57 @@
     "type": "system",
     "timestamp": "2026-04-20T09:08:10.559Z",
     "readBy": [
-      "user1"
+      "user1",
+      "user2"
     ]
+  },
+  {
+    "id": "dbe57f65-603d-499a-8fd3-003aceccb76b",
+    "itemId": "2",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "yes",
+    "type": "text",
+    "timestamp": "2026-04-20T09:33:58.718Z"
+  },
+  {
+    "id": "1b091de0-4e4b-4dfc-9b6f-2ec6ac7f8490",
+    "itemId": "2",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "are they persisting",
+    "type": "text",
+    "timestamp": "2026-04-20T09:34:37.306Z"
+  },
+  {
+    "id": "c6b6b292-feee-49ad-98ba-8ad9018392f9",
+    "itemId": "2",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "Share it",
+    "type": "text",
+    "timestamp": "2026-04-20T11:59:47.473Z"
+  },
+  {
+    "id": "ee525cc8-a8de-4fe9-9914-2f0f2a97342a",
+    "itemId": "2",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "Have it",
+    "type": "offer",
+    "price": 970,
+    "originalPrice": 150,
+    "status": "pending",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T12:00:06.716Z"
+  },
+  {
+    "id": "9c81d9f3-7418-4b5b-bc7a-e14beccca107",
+    "itemId": "2",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "show it",
+    "type": "text",
+    "timestamp": "2026-04-20T12:04:24.041Z"
   }
 ]

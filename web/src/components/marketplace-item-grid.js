@@ -14,6 +14,14 @@ class MarketplaceItemGrid extends LitElement {
   static styles = css`
     :host {
       display: block;
+      height: 100%;
+    }
+
+    .shell {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
     }
 
     .toolbar {
@@ -24,6 +32,7 @@ class MarketplaceItemGrid extends LitElement {
       gap: 1rem;
       color: var(--brand-muted);
       font-size: 0.9rem;
+      flex-shrink: 0;
     }
 
     .status {
@@ -33,11 +42,27 @@ class MarketplaceItemGrid extends LitElement {
 
     .query {
       color: var(--brand-muted);
+      text-align: right;
+    }
+
+    .scroll-region {
+      flex: 1;
+      min-height: 0;
+      overflow: auto;
+      padding-right: 0.25rem;
+    }
+
+    .scroll-region::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .scroll-region::-webkit-scrollbar-thumb {
+      background: rgba(95, 158, 169, 0.25);
+      border-radius: 999px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
     }
 
@@ -124,51 +149,52 @@ class MarketplaceItemGrid extends LitElement {
     return html`<div class="state-box ${extraClass}">${message}</div>`;
   }
 
-  render() {
+  renderContent() {
     if (this.loading) {
-      return html`
-        <div class="toolbar">
-          <span class="status">Loading items…</span>
-          <span class="query">Preparing marketplace listings</span>
-        </div>
-        ${this.renderStateBox('Fetching active listings from the backend...')}
-      `;
+      return this.renderStateBox('Fetching active listings from the backend...');
     }
 
     if (this.error) {
-      return html`
-        <div class="toolbar">
-          <span class="status">Could not load items</span>
-          <span class="query">Check backend connection</span>
-        </div>
-        ${this.renderStateBox(this.error, 'error')}
-      `;
+      return this.renderStateBox(this.error, 'error');
     }
 
     if (!this.items.length) {
-      return html`
-        <div class="toolbar">
-          <span class="status">0 items found</span>
-          <span class="query">
-            ${this.query ? `Search: "${this.query}"` : 'No active listings'}
-          </span>
-        </div>
-        ${this.renderStateBox(this.emptyMessage)}
-      `;
+      return this.renderStateBox(this.emptyMessage);
     }
 
     return html`
-      <div class="toolbar">
-        <span class="status">${this.items.length} item(s) found</span>
-        <span class="query">
-          ${this.query ? `Search: "${this.query}"` : 'Showing all active listings'}
-        </span>
-      </div>
-
       <div class="grid">
         ${this.items.map(
           (item) => html`<marketplace-item-card .item=${item}></marketplace-item-card>`
         )}
+      </div>
+    `;
+  }
+
+  render() {
+    return html`
+      <div class="shell">
+        <div class="toolbar">
+          <span class="status">
+            ${this.loading
+              ? 'Loading items…'
+              : this.error
+              ? 'Could not load items'
+              : `${this.items.length} item(s) found`}
+          </span>
+
+          <span class="query">
+            ${this.query
+              ? `Search: "${this.query}"`
+              : this.loading
+              ? 'Preparing marketplace listings'
+              : 'Showing all active listings'}
+          </span>
+        </div>
+
+        <div class="scroll-region">
+          ${this.renderContent()}
+        </div>
       </div>
     `;
   }

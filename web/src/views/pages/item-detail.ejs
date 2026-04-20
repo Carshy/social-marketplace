@@ -21,10 +21,11 @@
 
       <section class="grid gap-6 lg:grid-cols-2">
         <% componentPlan.forEach((component) => { %>
-          <%- include('../partials/lit-host', {
+            <%- include('../partials/lit-host', {
             tag: component.tag,
-            props: component.props
-          }) %>
+            props: component.props,
+            variant: 'standard'
+            }) %>
         <% }) %>
       </section>
 

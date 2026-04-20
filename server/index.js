@@ -73,7 +73,7 @@ const sampleItems = [
     name: 'Limited Edition Funko Pop - Batman',
     description: 'Rare convention exclusive, still in original box',
     price: 150,
-    image: 'https://images.unsplash.com/photo-1581235725079-7c7783e6a2df?w=400',
+    "image": "/images/batman-collectible.jpg",
     sellerId: 'user2',
     sellerName: 'ToyTrader',
     status: 'active',

@@ -94,15 +94,30 @@ class MarketplaceItemCard extends LitElement {
     this.item = {};
   }
 
+  getFallbackImage(item) {
+    const label = encodeURIComponent(item?.name || 'Collectible Item');
+    return `https://via.placeholder.com/600x400?text=${label}`;
+  }
+
+  handleImageError(event) {
+    const fallback = this.getFallbackImage(this.item);
+    if (event.target.src !== fallback) {
+      event.target.src = fallback;
+    }
+  }
+
   render() {
     const item = this.item || {};
-    const image =
-      item.image || 'https://via.placeholder.com/600x400?text=Collectible+Item';
+    const image = item.image || this.getFallbackImage(item);
 
     return html`
       <a href="/items/${item.id}">
         <article class="card">
-          <img src=${image} alt=${item.name || 'Marketplace item'} />
+          <img
+            src=${image}
+            alt=${item.name || 'Marketplace item'}
+            @error=${this.handleImageError}
+          />
           <div class="content">
             <div class="seller">${item.sellerName || 'Unknown seller'}</div>
             <h4>${item.name || 'Untitled item'}</h4>

@@ -139,7 +139,7 @@ class MarketplaceItemDetail extends LitElement {
     this.viewerId = '';
     this.viewerName = '';
     this.item = null;
-    this.loading = true;
+    this.loading = false;
     this.error = '';
     this._refreshHandler = this.handleRefresh.bind(this);
   }
@@ -147,12 +147,17 @@ class MarketplaceItemDetail extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     window.addEventListener('marketplace-item-refresh', this._refreshHandler);
-    this.loadItem();
   }
 
   disconnectedCallback() {
     window.removeEventListener('marketplace-item-refresh', this._refreshHandler);
     super.disconnectedCallback();
+  }
+
+  updated(changedProps) {
+    if (changedProps.has('itemId') && this.itemId) {
+      this.loadItem();
+    }
   }
 
   handleRefresh(event) {
@@ -161,6 +166,8 @@ class MarketplaceItemDetail extends LitElement {
   }
 
   async loadItem() {
+    if (!this.itemId) return;
+
     this.loading = true;
     this.error = '';
 
@@ -174,11 +181,27 @@ class MarketplaceItemDetail extends LitElement {
     }
   }
 
+  getFallbackImage() {
+    const label = encodeURIComponent(this.item?.name || 'Collectible Item');
+    return `https://via.placeholder.com/800x500?text=${label}`;
+  }
+
+  handleImageError(event) {
+    const fallback = this.getFallbackImage();
+    if (event.target.src !== fallback) {
+      event.target.src = fallback;
+    }
+  }
+
   statusChipClass(status) {
     return status === 'sold' ? 'chip status-sold' : 'chip status-active';
   }
 
   render() {
+    if (!this.itemId) {
+      return html`<div class="state-box">Waiting for item identity…</div>`;
+    }
+
     if (this.loading) {
       return html`<div class="state-box">Loading item details…</div>`;
     }
@@ -191,13 +214,17 @@ class MarketplaceItemDetail extends LitElement {
       return html`<div class="state-box">Item not found.</div>`;
     }
 
-    const image =
-      this.item.image || 'https://via.placeholder.com/600x400?text=Collectible+Item';
+    const image = this.item.image || this.getFallbackImage();
 
     return html`
       <article class="panel">
         <div class="image-wrap">
-          <img class="image" src=${image} alt=${this.item.name || 'Marketplace item'} />
+          <img
+            class="image"
+            src=${image}
+            alt=${this.item.name || 'Marketplace item'}
+            @error=${this.handleImageError}
+          />
         </div>
 
         <div class="meta">

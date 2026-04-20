@@ -1,4 +1,15 @@
-<section class="page-shell-card p-6">
+<%
+  const hostVariant =
+    typeof variant !== 'undefined' && variant ? variant : 'standard';
+
+  const isShowcase = hostVariant === 'showcase';
+
+  const shellClasses = isShowcase
+    ? 'page-shell-card p-5 flex h-[760px] flex-col overflow-hidden'
+    : 'page-shell-card p-6';
+%>
+
+<section class="<%= shellClasses %>">
   <div class="flex items-center justify-between gap-4">
     <div>
       <p class="page-shell-label text-xs font-semibold uppercase">
@@ -14,7 +25,7 @@
     </span>
   </div>
 
-  <div data-lit-root class="mt-5">
+  <div data-lit-root class="<%= isShowcase ? 'mt-5 flex-1 min-h-0' : 'mt-5' %>">
     <<%= tag %>></<%= tag %>>
     <script type="application/json" class="component-props"><%- JSON.stringify(props) %></script>
   </div>
