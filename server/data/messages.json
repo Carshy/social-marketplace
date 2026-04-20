@@ -7,5 +7,46 @@
     "content": "Is this comic still available?",
     "type": "text",
     "timestamp": "2026-04-12T10:56:02.346Z"
+  },
+  {
+    "id": "9b933ddf-72ab-4c98-93a1-2335dbf34115",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "Yes, it is still available.",
+    "type": "text",
+    "timestamp": "2026-04-20T01:41:06.990Z"
+  },
+  {
+    "id": "17ebd77d-7830-4f31-88c3-f5fc602637a5",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "Yes, it is still available.",
+    "type": "text",
+    "timestamp": "2026-04-20T01:48:13.513Z"
+  },
+  {
+    "id": "56cbf056-d10e-41cb-930e-7f2ecb9ee7dc",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "I can offer 470",
+    "type": "offer",
+    "price": 470,
+    "originalPrice": 500,
+    "status": "accepted",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T01:51:19.361Z",
+    "respondedAt": "2026-04-20T01:52:34.232Z"
+  },
+  {
+    "id": "a73c6555-23e7-471b-96cf-2e87ee696a1b",
+    "itemId": "1",
+    "senderId": "system",
+    "senderName": "System",
+    "content": "ToyTrader's offer of $470 was accepted.",
+    "type": "system",
+    "timestamp": "2026-04-20T01:52:34.233Z"
   }
 ]

@@ -4,7 +4,7 @@
     "name": "ComicCollector",
     "password": "d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791",
     "createdAt": "2026-04-20T01:24:56.190Z",
-    "lastLogin": "2026-04-20T01:28:12.459Z"
+    "lastLogin": "2026-04-20T02:04:53.274Z"
   },
   {
     "id": "user2",
@@ -19,5 +19,12 @@
     "password": "d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791",
     "createdAt": "2026-04-20T01:24:56.190Z",
     "lastLogin": "2026-04-20T01:24:56.190Z"
+  },
+  {
+    "id": "d4fd80a7-a1c5-470d-9d76-8bb988718885",
+    "name": "NewBuyer",
+    "password": "d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791",
+    "createdAt": "2026-04-20T02:04:09.958Z",
+    "lastLogin": "2026-04-20T02:04:09.958Z"
   }
 ]
