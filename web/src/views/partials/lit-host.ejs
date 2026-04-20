@@ -1,0 +1,18 @@
+<div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+  <div class="flex items-center justify-between gap-3">
+    <h3 class="text-sm font-semibold tracking-wide text-slate-900">
+      Planned component
+    </h3>
+    <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
+      <%= tag %>
+    </span>
+  </div>
+
+  <p class="mt-3 text-sm text-slate-600">
+    This host is being decided by the server. In the next phase, this placeholder becomes a real Lit component.
+  </p>
+
+  <div class="mt-4 rounded-xl bg-slate-950 p-4 text-xs text-slate-100 overflow-x-auto">
+    <pre><%= JSON.stringify(props, null, 2) %></pre>
+  </div>
+</div>

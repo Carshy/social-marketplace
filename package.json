@@ -1,0 +1,13 @@
+{
+  "name": "social-marketplace",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix web\" \"npm run dev:css --prefix web\"",
+    "server": "npm run dev --prefix server",
+    "web": "npm run dev --prefix web",
+    "web:css": "npm run dev:css --prefix web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
