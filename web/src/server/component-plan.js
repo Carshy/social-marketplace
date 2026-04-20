@@ -21,29 +21,41 @@ export const getHomeComponentPlan = () => [
   }
 ];
 
-export const getItemDetailComponentPlan = ({ itemId }) => [
+export const getItemDetailComponentPlan = ({
+  itemId,
+  viewerId,
+  viewerName
+}) => [
   {
     tag: 'marketplace-item-detail',
     props: {
-      itemId
+      itemId,
+      viewerId,
+      viewerName
     }
   },
   {
     tag: 'marketplace-offer-panel',
     props: {
-      itemId
+      itemId,
+      viewerId,
+      viewerName
     }
   },
   {
     tag: 'marketplace-chat-thread',
     props: {
-      itemId
+      itemId,
+      viewerId,
+      viewerName
     }
   },
   {
     tag: 'marketplace-checkout-panel',
     props: {
-      itemId
+      itemId,
+      viewerId,
+      viewerName
     }
   }
 ];

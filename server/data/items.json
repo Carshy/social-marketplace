@@ -8,11 +8,11 @@
     "sellerId": "user1",
     "sellerName": "ComicCollector",
     "status": "active",
-    "highestOffer": 470,
-    "highestOfferBuyer": "user2",
+    "highestOffer": 7500,
+    "highestOfferBuyer": "user1",
     "paymentStatus": "awaiting_checkout",
     "createdAt": "2026-04-20T01:24:56.188Z",
-    "agreedPrice": 470,
+    "agreedPrice": 960,
     "agreedBuyerId": "user2"
   },
   {

@@ -22,8 +22,20 @@ router.get('/', (_req, res) => {
 
 router.get('/items/:id', (req, res) => {
   const itemId = req.params.id;
-  const viewModel = buildItemViewModel({ itemId });
-  const componentPlan = getItemDetailComponentPlan({ itemId });
+  const viewerId = String(req.query.viewerId || 'user2').trim();
+  const viewerName = String(req.query.viewerName || 'ToyTrader').trim();
+
+  const viewModel = buildItemViewModel({
+    itemId,
+    viewerId,
+    viewerName
+  });
+
+  const componentPlan = getItemDetailComponentPlan({
+    itemId,
+    viewerId,
+    viewerName
+  });
 
   res.render('pages/item-detail', {
     ...viewModel,

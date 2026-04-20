@@ -6,7 +6,10 @@
     "senderName": "ToyTrader",
     "content": "Is this comic still available?",
     "type": "text",
-    "timestamp": "2026-04-12T10:56:02.346Z"
+    "timestamp": "2026-04-12T10:56:02.346Z",
+    "readBy": [
+      "user1"
+    ]
   },
   {
     "id": "9b933ddf-72ab-4c98-93a1-2335dbf34115",
@@ -15,7 +18,10 @@
     "senderName": "ComicCollector",
     "content": "Yes, it is still available.",
     "type": "text",
-    "timestamp": "2026-04-20T01:41:06.990Z"
+    "timestamp": "2026-04-20T01:41:06.990Z",
+    "readBy": [
+      "user2"
+    ]
   },
   {
     "id": "17ebd77d-7830-4f31-88c3-f5fc602637a5",
@@ -24,7 +30,10 @@
     "senderName": "ComicCollector",
     "content": "Yes, it is still available.",
     "type": "text",
-    "timestamp": "2026-04-20T01:48:13.513Z"
+    "timestamp": "2026-04-20T01:48:13.513Z",
+    "readBy": [
+      "user2"
+    ]
   },
   {
     "id": "56cbf056-d10e-41cb-930e-7f2ecb9ee7dc",
@@ -38,7 +47,10 @@
     "status": "accepted",
     "parentMessageId": null,
     "timestamp": "2026-04-20T01:51:19.361Z",
-    "respondedAt": "2026-04-20T01:52:34.232Z"
+    "respondedAt": "2026-04-20T01:52:34.232Z",
+    "readBy": [
+      "user1"
+    ]
   },
   {
     "id": "a73c6555-23e7-471b-96cf-2e87ee696a1b",
@@ -47,6 +59,383 @@
     "senderName": "System",
     "content": "ToyTrader's offer of $470 was accepted.",
     "type": "system",
-    "timestamp": "2026-04-20T01:52:34.233Z"
+    "timestamp": "2026-04-20T01:52:34.233Z",
+    "readBy": [
+      "user2",
+      "user1"
+    ]
+  },
+  {
+    "id": "316e6a05-5855-4db9-ab07-c096fb8caa3e",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "I want this product today",
+    "type": "text",
+    "timestamp": "2026-04-20T07:00:36.485Z",
+    "readBy": [
+      "user1"
+    ]
+  },
+  {
+    "id": "d6ffc237-26e8-4635-af31-22f18c0589da",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "I can offer $500",
+    "type": "offer",
+    "price": 650,
+    "originalPrice": 500,
+    "status": "accepted",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T07:02:33.815Z",
+    "readBy": [
+      "user1"
+    ],
+    "respondedAt": "2026-04-20T07:55:17.097Z"
+  },
+  {
+    "id": "ce16ff2d-3a61-47fc-a8ae-90dc1e450918",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "Let me take it at $",
+    "type": "offer",
+    "price": 700,
+    "originalPrice": 500,
+    "status": "accepted",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T07:04:43.489Z",
+    "readBy": [
+      "user1"
+    ],
+    "respondedAt": "2026-04-20T07:23:37.601Z"
+  },
+  {
+    "id": "c9de7aab-0724-4286-9182-adf1a27c7673",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "That was for 750",
+    "type": "text",
+    "timestamp": "2026-04-20T07:07:01.223Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "3a0b4eff-f470-4800-a54f-635db5de157c",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "Take it at",
+    "type": "offer",
+    "price": 7500,
+    "originalPrice": 500,
+    "status": "pending",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T07:07:40.480Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "707c5160-9219-434d-8da1-24b89f8079be",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "Sorry, I meant",
+    "type": "offer",
+    "price": 750,
+    "originalPrice": 500,
+    "status": "pending",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T07:08:11.230Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "f53f5d45-070d-4989-8133-c1124bc51c66",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "Hello need this item",
+    "type": "text",
+    "timestamp": "2026-04-20T07:19:47.302Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "acd15e04-2974-4e15-be7c-ad6c405725a9",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "Was at",
+    "type": "offer",
+    "price": 750,
+    "originalPrice": 500,
+    "status": "pending",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T07:20:02.990Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "8cd06aac-20a0-481d-96cf-231823077e6b",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "We can do this",
+    "type": "text",
+    "timestamp": "2026-04-20T07:22:14.460Z",
+    "readBy": [
+      "user1"
+    ]
+  },
+  {
+    "id": "43b2f5b0-00fc-4bb1-9594-dc9475629b3a",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "Give me at",
+    "type": "offer",
+    "price": 750,
+    "originalPrice": 500,
+    "status": "accepted",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T07:22:30.622Z",
+    "readBy": [
+      "user1"
+    ],
+    "respondedAt": "2026-04-20T07:23:48.942Z"
+  },
+  {
+    "id": "9ca5687a-5e01-48bf-9119-87d8f8af195d",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "where is it",
+    "type": "text",
+    "timestamp": "2026-04-20T07:23:25.851Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "bbe33c4e-5e8c-40e8-ad92-a75e24752eea",
+    "itemId": "1",
+    "senderId": "system",
+    "senderName": "System",
+    "content": "ToyTrader's offer of $700 was accepted.",
+    "type": "system",
+    "timestamp": "2026-04-20T07:23:37.602Z",
+    "readBy": [
+      "user1",
+      "user2"
+    ]
+  },
+  {
+    "id": "4fa69a9f-4f34-4973-9c24-037e7f4dac48",
+    "itemId": "1",
+    "senderId": "system",
+    "senderName": "System",
+    "content": "ToyTrader's offer of $750 was accepted.",
+    "type": "system",
+    "timestamp": "2026-04-20T07:23:48.943Z",
+    "readBy": [
+      "user1",
+      "user2"
+    ]
+  },
+  {
+    "id": "94e61311-c714-4a87-8987-b09590359d05",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "yes",
+    "type": "text",
+    "timestamp": "2026-04-20T07:55:04.874Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "d2747355-b176-4c4c-874e-9d6ccc38d0c4",
+    "itemId": "1",
+    "senderId": "system",
+    "senderName": "System",
+    "content": "ToyTrader's offer of $650 was accepted.",
+    "type": "system",
+    "timestamp": "2026-04-20T07:55:17.098Z",
+    "readBy": [
+      "user1",
+      "user2"
+    ]
+  },
+  {
+    "id": "21518b44-6ccc-4d8f-9660-628aea980b71",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "yes",
+    "type": "text",
+    "timestamp": "2026-04-20T08:19:06.235Z",
+    "readBy": [
+      "user1"
+    ]
+  },
+  {
+    "id": "aad40b87-5a3d-4902-90b5-c0af2ca10210",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "yes",
+    "type": "text",
+    "timestamp": "2026-04-20T08:53:22.334Z",
+    "readBy": [
+      "user1"
+    ]
+  },
+  {
+    "id": "d7f37409-c750-4cbe-a8b0-de9793baba5e",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "get the offer",
+    "type": "text",
+    "timestamp": "2026-04-20T08:54:52.745Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "74130871-6981-404e-8d23-199792892643",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "I have",
+    "type": "offer",
+    "price": 800,
+    "originalPrice": 500,
+    "status": "pending",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T08:55:03.046Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "3eceb440-69b2-4048-b1fd-5c7e08c22f2e",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "I will see it",
+    "type": "text",
+    "timestamp": "2026-04-20T08:56:04.949Z",
+    "readBy": [
+      "user1"
+    ]
+  },
+  {
+    "id": "3bb1e113-5248-4007-8551-a605faf6fad3",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "ok",
+    "type": "text",
+    "timestamp": "2026-04-20T09:03:11.500Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "3b2e4874-9d39-4a11-ba02-b45b9f077c0a",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "Hello",
+    "type": "text",
+    "timestamp": "2026-04-20T09:05:28.058Z",
+    "readBy": [
+      "user1"
+    ]
+  },
+  {
+    "id": "ea12ee68-3f4a-4302-a589-2a7dca219426",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "Need it at",
+    "type": "offer",
+    "price": 950,
+    "originalPrice": 500,
+    "status": "rejected",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T09:05:59.750Z",
+    "readBy": [
+      "user1"
+    ],
+    "respondedAt": "2026-04-20T09:07:16.581Z"
+  },
+  {
+    "id": "bd30eadc-a323-4fcf-a85f-5f4c24863e36",
+    "itemId": "1",
+    "senderId": "user1",
+    "senderName": "ComicCollector",
+    "content": "That is okay",
+    "type": "offer",
+    "price": 960,
+    "originalPrice": 500,
+    "status": "pending",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T09:06:53.681Z",
+    "readBy": [
+      "user2"
+    ]
+  },
+  {
+    "id": "82cacf47-c96b-4bb1-a895-c6482c39e89c",
+    "itemId": "1",
+    "senderId": "system",
+    "senderName": "System",
+    "content": "ToyTrader's offer of $950 was rejected.",
+    "type": "system",
+    "timestamp": "2026-04-20T09:07:16.581Z",
+    "readBy": [
+      "user1",
+      "user2"
+    ]
+  },
+  {
+    "id": "c0875676-d358-4593-a033-a15915169ea2",
+    "itemId": "1",
+    "senderId": "user2",
+    "senderName": "ToyTrader",
+    "content": "Okay let us make it",
+    "type": "offer",
+    "price": 960,
+    "originalPrice": 500,
+    "status": "accepted",
+    "parentMessageId": null,
+    "timestamp": "2026-04-20T09:07:55.652Z",
+    "respondedAt": "2026-04-20T09:08:10.558Z",
+    "readBy": [
+      "user1"
+    ]
+  },
+  {
+    "id": "f0770bb0-a32a-4b7b-be11-0ead76762a62",
+    "itemId": "1",
+    "senderId": "system",
+    "senderName": "System",
+    "content": "ToyTrader's offer of $960 was accepted.",
+    "type": "system",
+    "timestamp": "2026-04-20T09:08:10.559Z",
+    "readBy": [
+      "user1"
+    ]
   }
 ]
