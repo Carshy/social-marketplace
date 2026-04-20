@@ -1,3 +1,44 @@
 [
- 
+  {
+    "id": "1",
+    "name": "Vintage Comic Book - Spider-Man #1",
+    "description": "Rare collectible comic in mint condition, never opened",
+    "price": 500,
+    "image": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=400",
+    "sellerId": "user1",
+    "sellerName": "ComicCollector",
+    "status": "active",
+    "highestOffer": null,
+    "highestOfferBuyer": null,
+    "paymentStatus": "unpaid",
+    "createdAt": "2026-04-20T01:24:56.188Z"
+  },
+  {
+    "id": "2",
+    "name": "Limited Edition Funko Pop - Batman",
+    "description": "Rare convention exclusive, still in original box",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1581235725079-7c7783e6a2df?w=400",
+    "sellerId": "user2",
+    "sellerName": "ToyTrader",
+    "status": "active",
+    "highestOffer": null,
+    "highestOfferBuyer": null,
+    "paymentStatus": "unpaid",
+    "createdAt": "2026-04-20T01:24:56.189Z"
+  },
+  {
+    "id": "3",
+    "name": "Pokemon Card - Charizard Holo",
+    "description": "First edition, graded PSA 9, extremely rare",
+    "price": 1200,
+    "image": "https://images.unsplash.com/photo-1621274403997-37aace184f49?w=400",
+    "sellerId": "user3",
+    "sellerName": "CardMaster",
+    "status": "active",
+    "highestOffer": null,
+    "highestOfferBuyer": null,
+    "paymentStatus": "unpaid",
+    "createdAt": "2026-04-20T01:24:56.189Z"
+  }
 ]
